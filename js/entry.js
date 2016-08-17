@@ -111,7 +111,7 @@ function init(curDiffAlgorithm, toOverwrite) {
   });
 }
 
-var diffAlgorithmBtns = document.getElementsByName('diffAlgorithm');
+var diffAlgorithmBtns = [].slice.call(document.getElementsByName('diffAlgorithm'), 0);
 diffAlgorithmBtns.forEach(function(oneBtn) {
   oneBtn.addEventListener('change', function() {
     ButtonGetReady.clear();
